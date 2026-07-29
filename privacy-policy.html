@@ -1,148 +1,521 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy – Rail Rota Companion</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.7;
-      color: #1a1a2e;
-      background: #f8f9fa;
-      padding: 24px;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      background: #fff;
-      border-radius: 16px;
-      padding: 48px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    }
-    h1 {
-      font-size: 28px;
-      color: #003688;
-      margin-bottom: 8px;
-    }
-    .effective-date {
-      color: #666;
-      font-size: 14px;
-      margin-bottom: 32px;
-    }
-    h2 {
-      font-size: 20px;
-      color: #003688;
-      margin-top: 32px;
-      margin-bottom: 12px;
-      padding-bottom: 6px;
-      border-bottom: 2px solid #e8edf3;
-    }
-    p, li {
-      margin-bottom: 12px;
-      font-size: 15px;
-    }
-    ul {
-      padding-left: 24px;
-      margin-bottom: 16px;
-    }
-    li { margin-bottom: 8px; }
-    strong { color: #003688; }
-    a { color: #003688; }
-    .contact-box {
-      background: #f0f4fa;
-      border-left: 4px solid #003688;
-      padding: 16px 20px;
-      border-radius: 0 8px 8px 0;
-      margin-top: 16px;
-    }
-    @media (max-width: 600px) {
-      .container { padding: 24px 20px; border-radius: 0; }
-      h1 { font-size: 22px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Rail Rota &amp; Rail Rota Companion</title>
+    <style>
+        :root {
+            --navy: #003688;
+            --navy-dark: #002255;
+            --accent: #E67E22;
+            --bg: #F8F9FA;
+            --card: #FFFFFF;
+            --text: #2C3E50;
+            --muted: #6C757D;
+            --border: #DEE2E6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+            color: white;
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header .subtitle {
+            font-size: 1rem;
+            opacity: 0.85;
+            font-weight: 400;
+        }
+
+        .header .apps {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .header .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 30px 20px 80px;
+        }
+
+        .effective-date {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px 30px;
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        section h2 .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: var(--navy);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        section h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text);
+            margin: 18px 0 8px;
+        }
+
+        section p {
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+
+        section ul {
+            margin: 8px 0 14px 20px;
+        }
+
+        section ul li {
+            margin-bottom: 6px;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            vertical-align: middle;
+            margin-left: 6px;
+        }
+
+        .badge-main {
+            background: var(--navy);
+            color: white;
+        }
+
+        .badge-companion {
+            background: var(--accent);
+            color: white;
+        }
+
+        .badge-both {
+            background: #27AE60;
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            font-size: 0.92rem;
+        }
+
+        table th, table td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        table th {
+            background: var(--bg);
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .highlight-box {
+            background: #EBF5FB;
+            border-left: 4px solid var(--navy);
+            padding: 14px 18px;
+            border-radius: 0 8px 8px 0;
+            margin: 14px 0;
+            font-size: 0.95rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.5rem; }
+            section { padding: 20px 18px; }
+            table { font-size: 0.82rem; }
+            table th, table td { padding: 8px; }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
+
+<div class="header">
     <h1>Privacy Policy</h1>
-    <p class="effective-date">Rail Rota Companion &middot; Effective Date: 29 July 2026</p>
-
-    <p>This Privacy Policy explains how Rail Rota Companion (&ldquo;the App&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) collects, uses, and protects information when you use our mobile application. We are committed to safeguarding your privacy and being transparent about what data we handle.</p>
-
-    <h2>1. Information We Collect</h2>
-    <p>The App collects and processes the following categories of information:</p>
-    <ul>
-      <li><strong>Sync Code:</strong> A unique code you enter (or scan via QR code) to link the App to an existing Rail Rota account. This code is used solely to retrieve your roster data.</li>
-      <li><strong>Driver Display Name &amp; Station:</strong> Your display name and home station, as set in the main Rail Rota app, are retrieved to personalise your experience.</li>
-      <li><strong>Roster &amp; Duty Data:</strong> Your shift schedule, duty cards, and any manual overrides are downloaded from the cloud to display your calendar.</li>
-    </ul>
-    <p>We do <strong>not</strong> collect any of the following:</p>
-    <ul>
-      <li>Precise or approximate location data</li>
-      <li>Contact lists, call logs, or SMS messages</li>
-      <li>Photographs or media (the camera is used exclusively to scan QR codes and no images are stored)</li>
-      <li>Financial or payment information</li>
-      <li>Health or biometric data</li>
-      <li>Advertising identifiers or tracking data</li>
-    </ul>
-
-    <h2>2. How We Use Your Information</h2>
-    <p>All data retrieved by the App is used exclusively to:</p>
-    <ul>
-      <li>Display your duty roster and shift calendar</li>
-      <li>Show duty details including sign-on/sign-off times, locations, and movements</li>
-      <li>Cache your schedule locally on your device so you can view it offline</li>
-    </ul>
-    <p>We do not use your data for advertising, marketing, analytics, profiling, or any purpose unrelated to displaying your roster.</p>
-
-    <h2>3. Data Storage &amp; Security</h2>
-    <ul>
-      <li><strong>Cloud Storage:</strong> Your roster data is stored in Google Firebase Cloud Firestore. Data is transmitted securely over HTTPS/TLS encryption.</li>
-      <li><strong>Local Storage:</strong> A cached copy of your roster is stored on your device using encrypted local storage so you can access your schedule offline.</li>
-      <li><strong>No Additional Servers:</strong> The App does not operate its own backend servers. All cloud data is managed through Google Firebase infrastructure, which complies with industry-standard security practices.</li>
-    </ul>
-
-    <h2>4. Data Sharing &amp; Third Parties</h2>
-    <p>We do <strong>not</strong> sell, trade, rent, or share your personal data with any third parties. Your roster data is never disclosed to advertisers, data brokers, or analytics providers.</p>
-    <p>The only third-party service used is:</p>
-    <ul>
-      <li><strong>Google Firebase (Cloud Firestore):</strong> Used to store and sync your roster data. Firebase is operated by Google and subject to the <a href="https://firebase.google.com/terms" target="_blank" rel="noopener">Firebase Terms of Service</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
-    </ul>
-
-    <h2>5. Camera Permission</h2>
-    <p>The App requests access to your device camera solely to scan QR codes for entering your sync code. No photographs are taken, stored, or transmitted. You may deny camera access and manually enter your sync code instead.</p>
-
-    <h2>6. Data Retention</h2>
-    <p>Your cached roster data is retained on your device until you:</p>
-    <ul>
-      <li>Remove the driver profile from the App</li>
-      <li>Clear the App&rsquo;s data through your device settings</li>
-      <li>Uninstall the App</li>
-    </ul>
-    <p>Cloud-stored roster data is managed by the primary Rail Rota app. Deleting the Companion app does not affect your cloud data.</p>
-
-    <h2>7. Children&rsquo;s Privacy</h2>
-    <p>The App is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us and we will take steps to delete such information.</p>
-
-    <h2>8. Your Rights</h2>
-    <p>You have the right to:</p>
-    <ul>
-      <li><strong>Access</strong> the data stored about you (visible directly within the App)</li>
-      <li><strong>Delete</strong> your local data at any time by clearing the App&rsquo;s storage or uninstalling it</li>
-      <li><strong>Withdraw</strong> camera permissions at any time through your device settings</li>
-    </ul>
-
-    <h2>9. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. We encourage you to review this policy periodically.</p>
-
-    <h2>10. Contact Us</h2>
-    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact us at:</p>
-    <div class="contact-box">
-      <p><strong>Email:</strong> <a href="mailto:railrotaapp@gmail.com">railrotapp@gmail.com</a></p>
-      <p><strong>App:</strong> Rail Rota Companion</p>
-      <p><strong>Developer:</strong> Rail Rota</p>
+    <p class="subtitle">Your data, your control. We keep it simple.</p>
+    <div class="apps">
+        <span class="app-badge">📅 Rail Rota</span>
+        <span class="app-badge">👥 Rail Rota Companion</span>
     </div>
-  </div>
+</div>
+
+<div class="container">
+
+    <p class="effective-date">Effective Date: 29 July 2026 &nbsp;|&nbsp; Last Updated: 29 July 2026</p>
+
+    <!-- Section 1 -->
+    <section>
+        <h2><span class="num">1</span> Introduction</h2>
+        <p>
+            This privacy policy applies to both <strong>Rail Rota</strong> (the "Main App") and 
+            <strong>Rail Rota Companion</strong> (the "Companion App"), collectively referred to as 
+            "the Apps" or "our Services". The Apps are developed and maintained by an independent developer 
+            ("we", "us", or "our").
+        </p>
+        <p>
+            <strong>Rail Rota</strong> is a personal roster management app designed for London Underground 
+            train drivers to view and manage their duty schedules.
+        </p>
+        <p>
+            <strong>Rail Rota Companion</strong> is a read-only companion app that allows a driver's 
+            partner, family, or friends to follow the driver's live working schedule.
+        </p>
+        <p>
+            We are committed to protecting your privacy. This policy explains what data we collect, 
+            how we use it, and your rights regarding your information.
+        </p>
+    </section>
+
+    <!-- Section 2 -->
+    <section>
+        <h2><span class="num">2</span> Data We Collect</h2>
+
+        <div class="highlight-box">
+            <strong>No account or login is required</strong> to use either app. We do not collect 
+            email addresses, passwords, or government-issued identification.
+        </div>
+
+        <h3>2.1 Data You Provide <span class="badge badge-main">Rail Rota</span></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Purpose</th>
+                    <th>Stored Where</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Display Name</td>
+                    <td>Shown on the Shift Swap Board &amp; shared with Companion users</td>
+                    <td>Device &amp; Firebase</td>
+                </tr>
+                <tr>
+                    <td>Phone Number (optional)</td>
+                    <td>Displayed on swap requests so colleagues can contact you</td>
+                    <td>Device &amp; Firebase</td>
+                </tr>
+                <tr>
+                    <td>Imported Duty Book (PDF)</td>
+                    <td>Parsed locally to generate your roster calendar</td>
+                    <td>Device only</td>
+                </tr>
+                <tr>
+                    <td>Duty Overrides &amp; Notes</td>
+                    <td>Manual shift edits, daily notes, annual leave, sickness records</td>
+                    <td>Device &amp; Firebase</td>
+                </tr>
+                <tr>
+                    <td>E.I.R.F. Records</td>
+                    <td>Incident report drafts you create</td>
+                    <td>Device only</td>
+                </tr>
+                <tr>
+                    <td>Notepad Text</td>
+                    <td>Freeform notes (door codes, personal reminders)</td>
+                    <td>Device only</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2.2 Data You Provide <span class="badge badge-companion">Companion</span></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Purpose</th>
+                    <th>Stored Where</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sync Code</td>
+                    <td>Links you to a driver's schedule (entered manually or scanned via QR)</td>
+                    <td>Device only</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2.3 Automatically Generated Data <span class="badge badge-both">Both Apps</span></h3>
+        <ul>
+            <li><strong>Sync Code</strong> — A randomly generated 8-character alphanumeric code (e.g. <code>A4F9-X21T</code>) created automatically on first launch of Rail Rota. This code acts as the unique identifier for cloud backup and companion pairing. It is <em>not</em> linked to your real identity.</li>
+            <li><strong>Anonymous Device Identifiers</strong> — Used by RevenueCat (in-app purchases) and Google AdMob (advertising) as described in Section 4.</li>
+        </ul>
+    </section>
+
+    <!-- Section 3 -->
+    <section>
+        <h2><span class="num">3</span> How We Use Your Data</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Purpose</th>
+                    <th>Applies To</th>
+                    <th>Legal Basis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Display your duty roster and calendar</td>
+                    <td><span class="badge badge-both">Both</span></td>
+                    <td>Contractual necessity</td>
+                </tr>
+                <tr>
+                    <td>Sync schedule to Companion users in real time</td>
+                    <td><span class="badge badge-both">Both</span></td>
+                    <td>Legitimate interest / Consent</td>
+                </tr>
+                <tr>
+                    <td>Cloud backup &amp; restore across devices</td>
+                    <td><span class="badge badge-main">Rail Rota</span></td>
+                    <td>Contractual necessity</td>
+                </tr>
+                <tr>
+                    <td>Facilitate shift swaps between drivers</td>
+                    <td><span class="badge badge-main">Rail Rota</span></td>
+                    <td>Consent</td>
+                </tr>
+                <tr>
+                    <td>Serve advertisements (free tier)</td>
+                    <td><span class="badge badge-main">Rail Rota</span></td>
+                    <td>Consent</td>
+                </tr>
+                <tr>
+                    <td>Process in-app purchases</td>
+                    <td><span class="badge badge-main">Rail Rota</span></td>
+                    <td>Contractual necessity</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Section 4 -->
+    <section>
+        <h2><span class="num">4</span> Third-Party Services</h2>
+        <p>The Apps use the following third-party services, each of which has its own privacy policy:</p>
+
+        <h3>4.1 Google Firebase / Cloud Firestore <span class="badge badge-both">Both Apps</span></h3>
+        <p>
+            We use Firebase Cloud Firestore to store cloud backups and enable real-time schedule 
+            syncing between Rail Rota and the Companion App. Data is stored in Google's cloud 
+            infrastructure and is identified only by your anonymous Sync Code.
+        </p>
+        <p><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy →</a></p>
+
+        <h3>4.2 Google AdMob <span class="badge badge-main">Rail Rota</span></h3>
+        <p>
+            We display banner advertisements via Google AdMob in the free version of Rail Rota. 
+            AdMob may collect device identifiers and usage data for ad personalisation. You can 
+            opt out of personalised ads in your device's settings.
+        </p>
+        <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy →</a></p>
+
+        <h3>4.3 RevenueCat <span class="badge badge-main">Rail Rota</span></h3>
+        <p>
+            We use RevenueCat to manage in-app subscriptions and purchases. RevenueCat processes 
+            anonymous identifiers to track subscription status. It does not receive your name, 
+            email, or roster data.
+        </p>
+        <p><a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat Privacy Policy →</a></p>
+
+        <h3>4.4 Expo Notifications <span class="badge badge-both">Both Apps</span></h3>
+        <p>
+            Push notification tokens may be generated to deliver local notifications (e.g. shift 
+            reminders, schedule update alerts). These tokens are stored on-device and are not 
+            shared with any third party.
+        </p>
+    </section>
+
+    <!-- Section 5 -->
+    <section>
+        <h2><span class="num">5</span> Companion App Pairing &amp; Data Sharing</h2>
+        <p>
+            When a Rail Rota user shares their Sync Code (via QR code or text), they are granting 
+            the recipient <strong>read-only access</strong> to the following information:
+        </p>
+        <ul>
+            <li>Display name and tube line</li>
+            <li>Duty schedule (sign-on/sign-off times and locations)</li>
+            <li>Daily notes and duty overrides (swaps, annual leave, rest days)</li>
+            <li>Train movement details</li>
+        </ul>
+        <div class="highlight-box">
+            <strong>Important:</strong> Sharing your Sync Code is entirely voluntary. You can 
+            revoke access at any time by generating a new Sync Code from the Backup &amp; Restore 
+            screen, which will immediately disconnect all linked Companion apps.
+        </div>
+        <p>
+            The Companion App is strictly <strong>read-only</strong>. Companion users cannot edit, 
+            delete, or modify any of your data.
+        </p>
+    </section>
+
+    <!-- Section 6 -->
+    <section>
+        <h2><span class="num">6</span> Data Storage &amp; Security</h2>
+        <h3>Local Storage</h3>
+        <p>
+            The majority of your data is stored locally on your device using AsyncStorage (encrypted 
+            at rest by your device's OS). This includes your imported duty books, E.I.R.F. records, 
+            notepad content, tracked trains, and app preferences.
+        </p>
+        <h3>Cloud Storage</h3>
+        <p>
+            When you use Cloud Backup or the Companion App sync feature, a subset of your data is 
+            stored in Google Cloud Firestore. This data is:
+        </p>
+        <ul>
+            <li>Encrypted in transit (TLS) and at rest (AES-256)</li>
+            <li>Identified only by your anonymous Sync Code — not your real name or email</li>
+            <li>Stored in Google Cloud data centres subject to Google's security practices</li>
+        </ul>
+    </section>
+
+    <!-- Section 7 -->
+    <section>
+        <h2><span class="num">7</span> Data Retention</h2>
+        <ul>
+            <li><strong>Local data</strong> is retained until you uninstall the app or manually clear it.</li>
+            <li><strong>Cloud backup data</strong> is retained until you overwrite it with a new backup or delete it by request.</li>
+            <li><strong>Swap Board posts</strong> are automatically removed after their relevant date has passed.</li>
+        </ul>
+    </section>
+
+    <!-- Section 8 -->
+    <section>
+        <h2><span class="num">8</span> Your Rights</h2>
+        <p>Under applicable data protection laws (including UK GDPR), you have the right to:</p>
+        <ul>
+            <li><strong>Access</strong> — View all data stored about you (most is visible directly in the app).</li>
+            <li><strong>Rectification</strong> — Edit your display name, phone number, and other profile data at any time.</li>
+            <li><strong>Erasure</strong> — Delete your cloud backup by uninstalling the app, or contact us to request cloud data removal.</li>
+            <li><strong>Portability</strong> — Export a full backup of your data as a JSON file from Utilities → Backup &amp; Restore.</li>
+            <li><strong>Withdraw Consent</strong> — Disable personalised ads in your device settings, or stop using cloud sync at any time.</li>
+        </ul>
+    </section>
+
+    <!-- Section 9 -->
+    <section>
+        <h2><span class="num">9</span> Children's Privacy</h2>
+        <p>
+            The Apps are not directed at children under the age of 13. We do not knowingly collect 
+            personal data from children. If you believe a child has provided us with personal 
+            information, please contact us so we can take appropriate action.
+        </p>
+    </section>
+
+    <!-- Section 10 -->
+    <section>
+        <h2><span class="num">10</span> Changes to This Policy</h2>
+        <p>
+            We may update this privacy policy from time to time. Changes will be reflected by 
+            updating the "Last Updated" date at the top of this page. We encourage you to review 
+            this policy periodically. Continued use of the Apps after changes constitutes 
+            acceptance of the updated policy.
+        </p>
+    </section>
+
+    <!-- Section 11 -->
+    <section>
+        <h2><span class="num">11</span> Contact Us</h2>
+        <p>
+            If you have any questions about this privacy policy, your data, or wish to exercise 
+            any of your rights, please contact us at:
+        </p>
+        <p style="margin-top: 10px;">
+            <strong>Email:</strong> <a href="mailto:railrotaapp@gmail.com">railrotaapp@gmail.com</a>
+        </p>
+    </section>
+
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 Rail Rota. All rights reserved.</p>
+    <p style="margin-top: 4px;">This policy covers Rail Rota v1.1.2+ and Rail Rota Companion v1.0.0+</p>
+</div>
+
 </body>
 </html>
