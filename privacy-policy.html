@@ -194,6 +194,26 @@
             font-size: 0.95rem;
         }
 
+        .top-nav {
+            background: var(--navy-dark);
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .top-nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 12px;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .top-nav a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
         .footer {
             text-align: center;
             padding: 30px 20px;
@@ -201,6 +221,16 @@
             font-size: 0.85rem;
             border-top: 1px solid var(--border);
             margin-top: 20px;
+        }
+
+        .footer a {
+            color: var(--navy);
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 600px) {
@@ -213,12 +243,19 @@
 </head>
 <body>
 
+<nav class="top-nav">
+    <a href="index.html">&larr; Home</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+</nav>
+
 <div class="header">
     <h1>Privacy Policy</h1>
     <p class="subtitle">Your data, your control. We keep it simple.</p>
     <div class="apps">
         <span class="app-badge">📅 Rail Rota</span>
         <span class="app-badge">👥 Rail Rota Companion</span>
+        <span class="app-badge">⌚ Rail Rota Wear OS</span>
     </div>
 </div>
 
@@ -506,7 +543,7 @@
             any of your rights, please contact us at:
         </p>
         <p style="margin-top: 10px;">
-            <strong>Email:</strong> <a href="mailto:railrotaapp@gmail.com">railrotaapp@gmail.com</a>
+            <strong>Email:</strong> <a href="mailto:support@railrota.app">support@railrota.app</a>
         </p>
     </section>
 
@@ -514,7 +551,12 @@
 
 <div class="footer">
     <p>&copy; 2026 Rail Rota. All rights reserved.</p>
-    <p style="margin-top: 4px;">This policy covers Rail Rota v1.1.2+ and Rail Rota Companion v1.0.0+</p>
+    <p style="margin-top: 6px;">
+        <a href="index.html">Home</a> |
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="terms-of-service.html">Terms of Service</a> |
+        <a href="mailto:support@railrota.com">Contact Support</a>
+    </p>
 </div>
 
 </body>
